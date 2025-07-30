@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: finance-app
+  name: insureme-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: finance-app
+      app: insureme-app
   template:
     metadata:
       labels: 
-        app: finance-app
+        app: insureme-app
     spec:
       containers:
-        - name: finance-app
-          image: mahithareddy/banking-finance:1.0
+        - name: insureme-app
+          image: mahithareddy/insureme:1.0
           ports: 
           - containerPort: 8081
           env:
@@ -26,14 +26,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: finance-app-service
+  name: insureme-app-service
 spec:
   selector:
-    app: finance-app
+    app: insureme-app
   ports:
     - port: 8081
       targetPort: 8081
       protocol: TCP
-      nodePort: 30081
+      nodePort: 30084
   type: NodePort
   
