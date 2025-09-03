@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: insureme-app
-          image: mahithareddy/insureme:1.0
+          image: mahithareddy/insurance:1.0
           ports: 
           - containerPort: 8081
           env:
@@ -38,4 +38,5 @@ spec:
   type: LoadBalancer
   
   
+
 
