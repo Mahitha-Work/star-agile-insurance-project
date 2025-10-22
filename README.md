@@ -8,7 +8,7 @@ This project front is based on simple HTML, CSS and Angular Js ad Backend is Jav
 In order to run the application use port 8081.....
 
 
-Docker file explanation
+Docker file explanationhbv
 
 1. FROM openjdk:11
 Purpose:
